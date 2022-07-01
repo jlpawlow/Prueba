@@ -45,6 +45,9 @@ Ahora para subir al remoto:
 https://www.youtube.com/watch?v=osO_eYMIKxM&list=PLQxX2eiEaqby-qh4raiKfYyb4T7WyHsfW&index=4
 D:\REPOGIT>git push -u origin master
 
+Para traer del remoto
+https://www.youtube.com/watch?v=IWnW0svZ9JQ&list=PLQxX2eiEaqby-qh4raiKfYyb4T7WyHsfW&index=5
+
 
 Clonar
 ------
