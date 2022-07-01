@@ -1,0 +1,90 @@
+
+https://www.freecodecamp.org/espanol/news/el-comando-git-push-explicado/
+https://www.youtube.com/watch?v=osO_eYMIKxM
+
+Para crear repositorio remoto:
+https://www.youtube.com/watch?v=LzVfVs5n3Gw&list=PLQxX2eiEaqby-qh4raiKfYyb4T7WyHsfW&index=3
+
+Ahora para subir al remoto:
+https://www.youtube.com/watch?v=osO_eYMIKxM&list=PLQxX2eiEaqby-qh4raiKfYyb4T7WyHsfW&index=4
+
+Repositorios git jose luis pawlow
+usuario: jlpawlow, esojSiul1228   (Las credenciales se agregaron a la cuenta jose.l.pawlow@gmail.com)
+usuario: sistemaspawlow, esojSiul1228 (credenciales se agregaron a sistemaspawlow@hotmail.com)
+
+
+Crear una carpeta
+Crear archivos dentro de la carpeta
+Ej. en Carpeta D:/REPOGIT crear el archivo biografia.txt
+En command:
+D:/REPOGIT>git init     (inicio git)
+D:/REPOGIT>git add biografia.txt
+
+luego modifico el archivo biografia.txt con lo que sea y
+D:/REPOGIT>git commit -m "version 1"     (-m crea una descripcion para el cambio)
+sigo haciendo cambios en cualquier archivo de la carpeta
+
+D:/REPOGIT>git add .       (agrego todos los cambios de todos los archivos de la carpeta>>)
+D:/REPOGIT>git add -m "camibos a la version 1"
+
+D:/REPOGIT>git status    (para ver si hay cambios pendientes)
+
+REPOSITORIO REMOTO  https://www.youtube.com/watch?v=LzVfVs5n3Gw&list=PLQxX2eiEaqby-qh4raiKfYyb4T7WyHsfW&index=3
+------------------
+entrar a github y verlos.
+copiar la ruta. ejemplo: https://github.com/jlpawlow/Prueba
+
+luego:
+D:/REPOGIT>git config user.name "jlpawlow"
+D:/REPOGIT>git config user.email "jose.l.pawlow@gmail.com"
+Ahora hay que vincular el repositorio local con el remoto
+D:/REPOGIT>git remot add origin "
+nota: el nombre origin puede ser cualquier otro, pero se utiliza por convencion
+
+Ahora para subir al remoto:
+https://www.youtube.com/watch?v=osO_eYMIKxM&list=PLQxX2eiEaqby-qh4raiKfYyb4T7WyHsfW&index=4
+D:\REPOGIT>git push -u origin master
+
+
+Clonar
+------
+
+Subir a un repositorio remoto y rama especifica
+En orden para subir tu código, primero debes clonar un repositorio a tu máquina local.
+
+# Una vez clonado el repositorio, estarás trabajando dentro de la rama por defecto (Por defecto es `main`)
+git clone https://github.com/<git-usuario>/<nombre-repo> && cd <nombre-repo>
+# Haz cambios y agrega tus archivos (repite el comando `git add` por cada archivo, o utiliza `git add .` para agregarlos todos)
+git add <nombre-archivo>
+# Ahora haz el commit de tu código
+git commit -m "Agregué cambios a mi repo!"
+# Sube los cambios en la rama 'main' a github
+git push origin main
+
+
+Subir a un repositorio remoto específico y todas las ramas que contiene.
+Si quieres subir todos tus cambios al repositorio remoto con todo y sus ramas, puedes utilizar:
+
+git push --all <NOMBRE-REMOTO>
+el cual:
+
+--all es la bandera que señala que quieres subir todas las ramas al repositorio remoto.
+NOMBRE-REMOTO es el nombre del repositorio remoto al cual las quieres subir.
+Subir a una rama específica con el parámetro force
+
+Si quieres ignorar los cambios locales hechos al repositorio Git en Github(Lo cual hacen la mayoría de desarrolladores para dar una solución rápida al servidor de desarrollo) luego puedes usar el comando —force para subir ignorando esos cambios.
+
+git push --force <NOMBRE-REMOTO> <RAMA-REMOTA>
+En la cual:
+
+NOMBRE-REMOTO es el nombre del repositorio remoto al cual quieres subir los cambios.
+RAMA-REMOTA es el nombre de la rama remota a la cual quieres subir los cambios.
+Subir ignorando el hook pre-push de Git
+Por defecto git push disparará el interruptor --verify. Esto significa que git ejecutará cualquier script pre-push(antes de subirlo) del lado del cliente, que haya sido configurado. Si el script pre-push falla, también fallará el git push. ( Hooks Pre-Push son buenos para hacer cosas como, revisar si los mensajes al hacer commit están dentro del estándar de la empresa, ejecutar tests unitarios, etc...). Ocasionalmente podrías querer ignorar este comportamiento por defecto, por ejemplo: en el escenario donde quisieras subir tus cambios a una rama en particular para que otro colaborador la descargue, pero los cambios en tu trabajo en progreso rompen los tests unitarios. Para ignorar el hook, simplemente inserta tu comando push y añade la bandera  --no-verify
+
+git push --no-verify
+
+
+
+
+
